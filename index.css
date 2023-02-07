@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.toptext {
+    text-align: center;
+    justify-content: center;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid;
+    border-color: black;
+    border-width: 1px; 
+    height: 600px;
+    max-width: 600px;
+} 
+
+td {
+    border: solid;
+    border-width: 1px;
+    border-color: darkblue;
+    height: 200px;
+    width: 200px;
+}
+
+.anX {
+    background-image: ("/images/anX.png");
+}
+
+.anO {
+    background-image: ("/images/anO.png");
+}
