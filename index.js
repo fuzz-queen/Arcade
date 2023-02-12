@@ -74,7 +74,7 @@ board.addEventListener('click', function (evt) {
         }
     }
 
-    winner = false
+    let winner = false
 
     if (isWinner(0, 1, 2)){
         console.log(`${whoseTurn.current} wins!`)
@@ -109,7 +109,18 @@ board.addEventListener('click', function (evt) {
         winner = true
     }
 
+
     if(!winner) {
+        let isTie=true;
+        for (let i=0; i<9; i++) {
+            console.log(board.children[i].className)
+            if (board.children[i].className === 'square'){
+                isTie=false;
+            } 
+        }
+        if (isTie === true) {
+            window.alert("It's a tie, dawg!")
+        }
         if (whoseTurn.current === 'x') {
             whoseTurn.current = 'o'
         } else {
@@ -119,19 +130,4 @@ board.addEventListener('click', function (evt) {
         alert(`${whoseTurn.current} wins!`)
     }
 })
-
-
-
-
-
-
-
-        // for(let i =0; i< 9; i++){
-        //     console.log(gameGrid)
-        //     console.log(i)
-        //     let gameSquare = document.createElement("div")
-        //     gameGrid.appendChild(gameSquare)
-        //     console.log('')
-        //   }
-    
 
