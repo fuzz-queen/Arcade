@@ -8,28 +8,52 @@ body {
     justify-content: center;
 }
 
-.board {
+.names {
     display: flex;
-    flex-wrap: wrap;
-    border: solid;
-    border-color: black;
-    border-width: 1px; 
+    flex-direction: column;
+}
+  
+
+.board {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
     height: 600px;
     max-width: 600px;
 } 
 
-td {
+.square {
+    display: grid;
     border: solid;
-    border-width: 1px;
+    border-width: 3px;
     border-color: darkblue;
     height: 200px;
     width: 200px;
 }
 
 .anX {
-    background-image: ("/images/anX.png");
+    font-family: sans-serif;
+    font-size: 210px;
+    color: crimson;
+    font-weight: bold;
+    border: solid;
+    border-width: 3px;
+    border-color: darkblue;
+    height: 200px;
+    width: 200px;
+    text-align: center;
 }
 
 .anO {
-    background-image: ("/images/anO.png");
+    font-family: sans-serif;
+    font-size: 210px;
+    text-align: center;
+    color: royalblue;
+    font-weight: bold;
+    border: solid;
+    border-width: 3px;
+    border-color: darkblue;
+    height: 200px;
+    width: 200px;
 }
